@@ -18,11 +18,15 @@
     "background": {
         "service_worker": "background.js"
     },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
     "permissions": [
         "activeTab",
         "scripting",
         "tabs",
-        "storage"
+        "storage",
+        "sidePanel"
     ],
     "icons": {
         "16": "icons/icon.png",

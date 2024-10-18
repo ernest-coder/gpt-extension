@@ -1,0 +1,9 @@
+Main: 
+[] Translate
+[] Ask in web page
+[] Check spelling 
+[] Login
+[] Payment
+
+Optional:
+[] Dark mode
