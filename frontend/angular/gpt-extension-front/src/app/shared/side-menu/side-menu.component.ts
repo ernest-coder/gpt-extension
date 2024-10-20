@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -9,20 +10,27 @@ import { Router } from '@angular/router';
   imports: [
     MatToolbarModule, 
     MatSidenavModule, 
+    CommonModule,
   ],
   templateUrl: './side-menu.component.html',
 })
 export class SideMenuComponent {
-  constructor(private vcr: ViewContainerRef, private cfr: ComponentFactoryResolver) {}
+  constructor(private router: Router) { }
 
-  async loadChatPage() {
-    // Clear the current view
-    this.vcr.clear();
+  loadChatPage():void {
+    this.router.navigate(['/chat']); 
+  }
 
-    // Dynamically load the ChatPageComponent
-    const { ChatPageComponent } = await import('../../components/chat/chat-page/chat-page.component'); // Path to ChatPageComponent
-    const componentFactory = this.cfr.resolveComponentFactory(ChatPageComponent);
-    this.vcr.createComponent(componentFactory);
+  loadTranslatePage():void {
+    this.router.navigate(['/translate']); 
+  }
+
+  loadGrammarPage():void {
+    this.router.navigate(['/grammar']); 
+  }
+
+  isActive(route: string): boolean {
+    return this.router.url === route;
   }
 
 }

@@ -4,7 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { SideMenuComponent } from './shared/side-menu/side-menu.component';
 import { HomeComponent } from './shared/home/home.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   imports: [RouterOutlet,
     MatToolbarModule, 
     MatSidenavModule, 
+    CommonModule,
     SideMenuComponent,
-    HomeComponent
+    HomeComponent,
   ],
   templateUrl: './app.component.html',
 })

@@ -1,8 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '@angular/material/prebuilt-themes/azure-blue.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+    --primary-color: #2196F3;
+    /* Blue color for primary */
+    --accent-color: #E91E63;
+    /* Pink color for accent */
+    --warn-color: #F44336;
+    /* Red color for warn */
+}
+
 html,
 body {
     height: 100%;

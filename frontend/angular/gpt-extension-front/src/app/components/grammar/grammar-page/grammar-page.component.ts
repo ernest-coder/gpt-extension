@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './grammar-page.component.html',
-  styleUrl: './grammar-page.component.css'
 })
 export class GrammarPageComponent {
 
