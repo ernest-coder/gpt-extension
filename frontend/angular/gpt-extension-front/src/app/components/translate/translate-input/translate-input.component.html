@@ -1,36 +1,38 @@
-<div>
-    <form [formGroup]="translateForm" (ngSubmit)="onSubmit()">
-        <div class="grid grid-cols-[1fr_auto_1fr] gap-2 items-center">
-            <!-- First Div (Input Language Select) -->
-            <div class="w-full">
-                <mat-form-field class="w-full m-0 p-0">
-                    <mat-label class="text-xs">Select Language</mat-label>
-                    <mat-select formControlName="inputLanguage" class="mat-select-content">
-                        <mat-option *ngFor="let language of languages" [value]="language.value" class="text-xs">{{ language.label }}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
+<div class="w-full">
+    <form [formGroup]="translateForm" (ngSubmit)="onSubmit()" class="w-full space-y-4">
+        <!-- First Div (Input Language Select) -->
+        <div>
+            <mat-form-field class="w-full">
+                <mat-label class="text-xs text-red-800">Input Language</mat-label>
+                <mat-select formControlName="inputLanguage">
+                    <mat-option *ngFor="let language of languages" [value]="language.value" class="text-xs">{{ language.label }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
 
-            <!-- Middle Div (SVG Icon) -->
-            <div class="flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.25 8.25L21 12m0 0-3.75 3.75M21 12H3"
-            />
-          </svg>
-            </div>
+        <!-- Input Text Field -->
+        <div>
+            <mat-form-field class="w-full">
+                <mat-label>Enter text here</mat-label>
+                <input matInput type="text" formControlName="textToTranslate" />
+            </mat-form-field>
+        </div>
 
-            <!-- Last Div (Output Language Select) -->
-            <div class="w-full">
-                <mat-form-field class="w-full m-0 p-0">
-                    <mat-label class="text-xs">Select Language</mat-label>
-                    <mat-select formControlName="outputLanguage" class="text-sm h-8">
-                        <mat-option *ngFor="let language of languages" [value]="language.value" class="text-xs">{{ language.label }}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
+        <!-- Middle Div (SVG Icon) -->
+        <div class="flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+        </div>
+
+        <!-- Last Div (Output Language Select) -->
+        <div>
+            <mat-form-field class="w-full">
+                <mat-label class="text-xs">Select Language</mat-label>
+                <mat-select formControlName="outputLanguage">
+                    <mat-option *ngFor="let language of languages" [value]="language.value" class="text-xs">{{ language.label }}</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </form>
 </div>

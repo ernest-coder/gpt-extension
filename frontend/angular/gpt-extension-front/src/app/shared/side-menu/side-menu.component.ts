@@ -1,18 +1,10 @@
-import { CommonModule } from '@angular/common';
-import { Component, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-menu',
-  standalone: true,
-  imports: [
-    MatToolbarModule, 
-    MatSidenavModule, 
-    CommonModule,
-  ],
   templateUrl: './side-menu.component.html',
+  styleUrl:'./side-menu.component.css',
 })
 export class SideMenuComponent {
   constructor(private router: Router) { }
@@ -31,6 +23,10 @@ export class SideMenuComponent {
 
   isActive(route: string): boolean {
     return this.router.url === route;
+  }
+
+  get currentUrl() : string {
+    return this.router.url
   }
 
 }

@@ -1,26 +1,9 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserModule } from '@angular/platform-browser';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatOptionModule } from '@angular/material/core';  // for mat-option
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-translate-input',
-  standalone: true,
-  imports: [
-    BrowserModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatSelectModule,   
-    MatOptionModule,  
-    MatInputModule,    
-    BrowserAnimationsModule,
-  ],
   templateUrl: './translate-input.component.html',
   styleUrl:'./translate-input.component.css'
 })
