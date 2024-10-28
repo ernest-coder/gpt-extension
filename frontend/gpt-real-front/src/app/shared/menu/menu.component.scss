@@ -1,0 +1,34 @@
+.gpt-menu-sidenav-container {
+    height: 100vh;
+}
+
+.gpt-menu-sidenav {
+    padding: 0.25rem;
+    padding-top: 1rem;
+    width: 4rem;
+}
+
+.gpt-menu-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gpt-menu-item {
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+.gpt-menu-icon-container {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.gpt-menu-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: stroke 0.2s;
+    // &:hover {
+    //     stroke: #0074d9;
+    // }
+}

@@ -1,0 +1,37 @@
+<div class="w-full">
+    <form [formGroup]="translateForm" (ngSubmit)="onSubmit()" class="w-full">
+        <!-- First Div (Input Language Select) -->
+        <div class="mb-0">
+            <mat-form-field class="w-full" style="margin-bottom: -1.25em">
+                <mat-label class="text-xs">Input Language</mat-label>
+                <mat-select formControlName="inputLanguage">
+                    <mat-option *ngFor="let language of languages" [value]="language.value" class="text-xs">{{ language.label }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w-full" style="margin-bottom: -1.25em">
+                <mat-label class="text-xs">Enter text here</mat-label>
+                <textarea matInput formControlName="textToTranslate" rows="5
+                " style="resize: vertical;"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+
+        </div>
+        <div class="mb-0">
+            <mat-form-field class="w-full" style="margin-bottom: -1.25em">
+                <mat-label class="text-xs">Ouput Language</mat-label>
+                <mat-select formControlName="outputLanguage">
+                    <mat-option *ngFor="let language of languages" [value]="language.value" class="text-xs">{{ language.label }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w-full" style="margin-bottom: -1.25em">
+                <textarea matInput rows="5
+                " style="resize: vertical;"></textarea>
+            </mat-form-field>
+        </div>
+
+    </form>
+</div>

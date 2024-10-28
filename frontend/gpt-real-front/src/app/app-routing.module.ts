@@ -1,0 +1,51 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ChatPageComponent } from './components/chat/chat-page/chat-page.component';
+import { TranslatePageComponent } from './components/translate/translate-page/translate-page.component';
+import { GrammarPageComponent } from './components/grammar/grammar-page/grammar-page.component';
+import { AuthPageComponent } from './components/auth/auth-page/auth-page.component';
+
+const routes: Routes = [
+  {
+    path: 'chat',
+    children: [
+      {
+        path: '',
+        component: ChatPageComponent,
+      },
+    ],
+  },
+  {
+    path: 'translate',
+    children: [
+      {
+        path: '',
+        component: TranslatePageComponent,
+      },
+    ],
+  },
+  {
+    path: 'grammar',
+    children: [
+      {
+        path: '',
+        component: GrammarPageComponent,
+      },
+    ],
+  },
+  {
+    path: 'auth',
+    children: [
+      {
+        path: '',
+        component: AuthPageComponent,
+      },
+    ],
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
