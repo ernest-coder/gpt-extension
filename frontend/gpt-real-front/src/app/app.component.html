@@ -3,8 +3,14 @@
     <div class="p-3 flex-grow">
         <router-outlet></router-outlet>
     </div>
+
     <!-- Sidebar (fixed width, on the right) -->
-    <div class="ml-auto w-10 bg-gray-100 shadow-lg">
+    <div class="ml-auto w-10 bg-gray-100 shadow-lg min-h-screen">
         <app-menu></app-menu>
     </div>
 </main>
+
+<!-- Footer (fixed at the bottom) -->
+<div class="fixed bottom-0 left-0 w-full bg-white shadow-lg">
+    <app-footer></app-footer>
+</div>

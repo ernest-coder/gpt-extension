@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AuthPageComponent {
 
+  loginWithGoogle() {
+    console.log('Google login clicked');
+  }
+
+  loginWithApple() {
+    console.log('Apple login clicked');
+  }
+
 }

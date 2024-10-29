@@ -16,6 +16,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ButtonAccentComponent } from './shared/button-accent/button-accent.component';
+import { ButtonCancelComponent } from './shared/button-cancel/button-cancel.component';
+import { ButtonDangerComponent } from './shared/button-danger/button-danger.component';
+import { ButtonPrimaryComponent } from './shared/button-primary/button-primary.component';
+import { ButtonTertiaryComponent } from './shared/button-tertiary/button-tertiary.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,13 @@ import { MatInputModule } from '@angular/material/input';
     AuthPageComponent,
     ChatPageComponent,
     GrammarPageComponent,
-    TranslatePageComponent
+    TranslatePageComponent,
+    ButtonAccentComponent,
+    ButtonCancelComponent,
+    ButtonDangerComponent,
+    ButtonPrimaryComponent,
+    ButtonTertiaryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +49,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSelectModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule 
 
   ],
   providers: [],
