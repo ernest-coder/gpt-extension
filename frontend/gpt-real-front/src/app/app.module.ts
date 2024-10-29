@@ -23,6 +23,7 @@ import { ButtonDangerComponent } from './shared/button-danger/button-danger.comp
 import { ButtonPrimaryComponent } from './shared/button-primary/button-primary.component';
 import { ButtonTertiaryComponent } from './shared/button-tertiary/button-tertiary.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     ButtonPrimaryComponent,
     ButtonTertiaryComponent,
     FooterComponent,
+    PricingPageComponent,
   ],
   imports: [
     BrowserModule,

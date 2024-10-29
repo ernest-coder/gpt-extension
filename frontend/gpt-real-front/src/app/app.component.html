@@ -1,11 +1,11 @@
-<main class="flex h-screen">
-    <!-- Main content -->
-    <div class="p-3 flex-grow">
+<main class="flex h-screen overflow-hidden pb-8">
+    <!-- Main content with scrollable area -->
+    <div class="p-3 flex-grow h-full overflow-y-auto">
         <router-outlet></router-outlet>
     </div>
 
-    <!-- Sidebar (fixed width, on the right) -->
-    <div class="ml-auto w-10 bg-gray-100 shadow-lg min-h-screen">
+    <!-- Sidebar (fixed/sticky on the right, not impacted by scrolling) -->
+    <div class="ml-auto w-10 bg-gray-100 shadow-lg h-screen sticky top-0">
         <app-menu></app-menu>
     </div>
 </main>

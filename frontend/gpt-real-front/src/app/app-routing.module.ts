@@ -4,6 +4,7 @@ import { ChatPageComponent } from './components/chat/chat-page/chat-page.compone
 import { TranslatePageComponent } from './components/translate/translate-page/translate-page.component';
 import { GrammarPageComponent } from './components/grammar/grammar-page/grammar-page.component';
 import { AuthPageComponent } from './components/auth/auth-page/auth-page.component';
+import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,15 @@ const routes: Routes = [
       {
         path: '',
         component: AuthPageComponent,
+      },
+    ],
+  },
+  {
+    path: 'pricing',
+    children: [
+      {
+        path: '',
+        component: PricingPageComponent,
       },
     ],
   },
