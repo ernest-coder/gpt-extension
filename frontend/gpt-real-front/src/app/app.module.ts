@@ -24,6 +24,7 @@ import { ButtonPrimaryComponent } from './shared/button-primary/button-primary.c
 import { ButtonTertiaryComponent } from './shared/button-tertiary/button-tertiary.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
+import { AlertToastComponent } from './shared/alert-toast/alert-toast.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PricingPageComponent } from './components/pricing/pricing-page/pricing-
     ButtonTertiaryComponent,
     FooterComponent,
     PricingPageComponent,
+    AlertToastComponent,
   ],
   imports: [
     BrowserModule,

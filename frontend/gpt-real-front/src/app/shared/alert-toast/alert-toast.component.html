@@ -1,0 +1,29 @@
+<div class="fixed bottom-2 right-2 flex flex-col max-h-screen overflow-y-scroll no-scrollbar pt-20" style="z-index: 1001">
+    <div *ngFor="let alert of alerts">
+        <div class="shadow-sm rounded-lg bg-white mx-auto my-2 p-4 notification-box w-80 {{cssClass(alert)}} ">
+            <div *ngIf="alert.title" class="text-sm flex flex-row justify-between items-start">
+                <span class="font-bold">
+                {{alert.title}}
+            </span>
+
+                <button (click)="removeAlert(alert)" class="material-symbols-sharp  cursor-pointer text-base font-bold text-black">
+            clear
+            </button>
+            </div>
+            <span *ngIf="alert.title" class="text-sm text-gray-600  tracking-tight ">
+                {{alert.message}}
+        </span>
+            <!-- Alert without title -->
+
+            <div *ngIf="!alert.title" class="text-sm flex flex-row justify-between items-start">
+                <span class="text-sm text-gray-600  tracking-tight ">
+                {{alert.message}}
+            </span>
+                <button (click)="removeAlert(alert)" class="material-symbols-sharp  cursor-pointer text-base font-bold text-black">
+                clear
+            </button>
+            </div>
+        </div>
+
+    </div>
+</div>
