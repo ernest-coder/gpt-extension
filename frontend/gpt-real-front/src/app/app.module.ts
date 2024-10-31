@@ -25,6 +25,7 @@ import { ButtonTertiaryComponent } from './shared/button-tertiary/button-tertiar
 import { FooterComponent } from './shared/footer/footer.component';
 import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
 import { AlertToastComponent } from './shared/alert-toast/alert-toast.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -54,10 +55,13 @@ import { AlertToastComponent } from './shared/alert-toast/alert-toast.component'
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule 
-
+    MatButtonModule ,
+    MatTooltipModule,
+  ],
+  exports: [
+    AlertToastComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
