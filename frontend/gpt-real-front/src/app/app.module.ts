@@ -26,6 +26,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
 import { AlertToastComponent } from './shared/alert-toast/alert-toast.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FormsModule } from '@angular/forms';
+import { TextFieldModule } from '@angular/cdk/text-field';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     MatButtonModule ,
     MatTooltipModule,
+    FormsModule,
+    TextFieldModule,
   ],
   exports: [
     AlertToastComponent
