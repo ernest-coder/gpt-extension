@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+// --primary-color: #185ABC
+// --secondary-color: #E8F0FE
+* {
+    font-family: 'Open Sans', sans-serif;
+}
 
 html,
 body {
@@ -7,7 +12,6 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 @tailwind base;
