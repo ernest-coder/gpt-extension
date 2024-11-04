@@ -46,7 +46,9 @@
         "sub_title": "How can I help you?",
         "first_quick_action": "Summarize this web page in bullet points",
         "second_quick_action": "Explain the key parts of this document",
-        "place_holder": "Type your question here..."
+        "place_holder": "Type your question here...",
+        "upload_file": "Upload file",
+        "web_page_chat": "Chat with web page"
     },
     "grammar": {
         "title": "Grammar",
