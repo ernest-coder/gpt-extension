@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +28,15 @@ import { AlertToastComponent } from './shared/alert-toast/alert-toast.component'
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguageService } from './shared/services/language.service';
+
+// Factory function to create a TranslateHttpLoader
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -48,6 +57,14 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     AlertToastComponent,
   ],
   imports: [
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -65,7 +82,13 @@ import { TextFieldModule } from '@angular/cdk/text-field';
   exports: [
     AlertToastComponent
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      deps: [LanguageService],
+      useFactory: (localeService: LanguageService) => localeService.getCurrentLanguage(),
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

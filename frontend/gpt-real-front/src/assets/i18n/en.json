@@ -1,0 +1,62 @@
+{
+    "global": {
+        "loading": "Loading...",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "close": "Close",
+        "create": "Create",
+        "edit": "Edit",
+        "send": "Send",
+        "back": "Back",
+        "next": "Next",
+        "copy": "Copy",
+        "delete": "Delete",
+        "includes": "Includes",
+        "previous": "Previous",
+        "choose": "Choose",
+        "home": "Home",
+        "ok": "Ok",
+        "credits": "credits",
+        "task_status": {
+            "pending": "Pending",
+            "processing": "Processing",
+            "completed": "Completed",
+            "failed": "Failed"
+        },
+        "menu": {
+            "login": "Login",
+            "chat": "Chat",
+            "translate": "Translate",
+            "grammar": "Grammar"
+        },
+        "footer": {
+            "subscription": "Go premium"
+        }
+    },
+    "auth": {
+        "connect": "Connect",
+        "google_login": "Login with Google",
+        "apple_login": "Login with Apple",
+        "data_privacy": "Your data will not be shared, and there will be no spam.",
+        "privacy_policy": "By continuing, you agree to the Privacy Policy & Terms of Use."
+    },
+    "chat": {
+        "title": "AI Chat",
+        "sub_title": "How can I help you?",
+        "first_quick_action": "Summarize this web page in bullet points",
+        "second_quick_action": "Explain the key parts of this document",
+        "place_holder": "Type your question here..."
+    },
+    "grammar": {
+        "title": "Grammar",
+        "input_label": "Text to correct",
+        "correction_button": "Correct"
+    },
+    "pricing": {
+        "occurence": "month"
+    },
+    "translate": {
+
+    }
+}
