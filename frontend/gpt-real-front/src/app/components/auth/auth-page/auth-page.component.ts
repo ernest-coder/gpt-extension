@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth-page',
@@ -7,12 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AuthPageComponent {
 
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
   loginWithGoogle() {
     console.log('Google login clicked');
   }
 
   loginWithApple() {
     console.log('Apple login clicked');
+  }
+
+  loginWithEmail() {
+    this.router.navigate(['email'], { relativeTo: this.route });
   }
 
 }
