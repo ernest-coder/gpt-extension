@@ -13,4 +13,9 @@ export class AuthService {
     return from(signUpPromise);
   }
 
+  emailLogin(email: string, password: string): Observable<any> {
+    const loginPromise = this.supabaseService.client.auth.signInWithPassword({ email, password });
+    return from(loginPromise);
+  }
+  
 }

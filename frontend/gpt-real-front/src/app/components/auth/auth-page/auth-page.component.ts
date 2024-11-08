@@ -18,7 +18,7 @@ export class AuthPageComponent {
     console.log('Apple login clicked');
   }
 
-  loginWithEmail() {
+  signupWithEmail() {
     this.router.navigate(['email'], { relativeTo: this.route });
   }
 

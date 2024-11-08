@@ -6,6 +6,7 @@ import { GrammarPageComponent } from './components/grammar/grammar-page/grammar-
 import { AuthPageComponent } from './components/auth/auth-page/auth-page.component';
 import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
 import { EmailLoginComponent } from './components/auth/email-login/email-login.component';
+import { EmailSignupComponent } from './components/auth/email-signup/email-signup.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
       {
         path: 'email',
         component: EmailLoginComponent,
+      },
+      {
+        path: 'signup',
+        component: EmailSignupComponent,
       },
     ],
   },
