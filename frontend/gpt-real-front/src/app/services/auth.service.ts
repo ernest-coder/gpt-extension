@@ -22,9 +22,6 @@ export class AuthService {
   signInWithGoogle() {
     return this.supabaseService.client.auth.signInWithOAuth({
       provider: 'google',
-      options: {
-        redirectTo: 'https://www.generalhelper.io/chat' // Update with your actual redirect URL
-      }
     });
   }
 
