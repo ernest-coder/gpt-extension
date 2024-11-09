@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertToastService } from 'src/app/services/alert-toast.service';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -12,19 +13,19 @@ export class AuthPageComponent {
   constructor(
     private router: Router, 
     private route: ActivatedRoute,
-    private authService:AuthService
+    private authService:AuthService,
+    private alertToastService:AlertToastService
   ) {}
 
   loginWithGoogle() {
       this.authService.signInWithGoogle().then((response) => {
         if (response.error) {
-          console.error('Error logging in with Google:', response.error);
+          this.alertToastService.error(`Error logging in with Google: ${response.error}`,);
         } else {
-          console.log('Google login successful:');
-          this.router.navigate(['/chat']); // Redirect to another page after login
+          this.router.navigate(['/chat']);
         }
       }).catch((error) => {
-        console.error('Unexpected error during Google login:', error);
+        this.alertToastService.error(`Unexpected error during Google login: ${error}`);
       });
   }
     

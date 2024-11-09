@@ -49,4 +49,17 @@ export class EmailLoginComponent {
   routerSignup() {
     this.router.navigate(["/auth/signup"]);
   }
+
+  loginWithGoogle() {
+    this.authService.signInWithGoogle().then((response) => {
+      if (response.error) {
+        this.alertToastService.error(`Error logging in with Google: ${response.error}`,);
+      } else {
+        this.router.navigate(['/chat']);
+      }
+    }).catch((error) => {
+      this.alertToastService.error(`Unexpected error during Google login: ${error}`);
+    });
+}
+  
 }
