@@ -19,6 +19,15 @@ export class AuthService {
     return from(loginPromise);
   }
 
+  signInWithGoogle() {
+    return this.supabaseService.client.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: 'https://www.generalhelper.io/chat' // Update with your actual redirect URL
+      }
+    });
+  }
+
   logout(): Observable<any> {
     const logoutPromise = this.supabaseService.client.auth.signOut();
     return from(logoutPromise);

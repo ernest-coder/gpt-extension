@@ -35,6 +35,7 @@ import { LanguageService } from './shared/services/language.service';
 import { EmailLoginComponent } from './components/auth/email-login/email-login.component';
 import { EmailSignupComponent } from './components/auth/email-signup/email-signup.component';
 import { UserComponent } from './shared/user/user.component';
+import { GeneralHelperIconComponent } from './shared/general-helper-icon/general-helper-icon.component';
 
 // Factory function to create a TranslateHttpLoader
 export function HttpLoaderFactory(http: HttpClient) {
@@ -61,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     EmailLoginComponent,
     EmailSignupComponent,
     UserComponent,
+    GeneralHelperIconComponent,
   ],
   imports: [
     HttpClientModule,
