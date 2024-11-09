@@ -24,7 +24,7 @@ export class EmailSignupComponent  {
     if (this.signupForm.valid) {
       const { email, password } = this.signupForm.value;
       this.authService.signUp(email, password).subscribe({
-        next: (response) => console.log('User signed up:', response.user),
+        next: (response) => console.log('User signed up:', response.data.user),
         error: (error) => console.error('Error signing up:', error)
       });
     } else {

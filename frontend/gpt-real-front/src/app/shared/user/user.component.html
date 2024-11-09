@@ -1,0 +1,53 @@
+<div *ngIf="user" class="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
+    <!-- Title -->
+    <h2 class="text-2xl font-semibold mb-4 text-center">User Profile</h2>
+
+    <!-- User ID -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">User ID:</span>
+        <p class="text-gray-800">{{ user.id }}</p>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">Email:</span>
+        <p class="text-gray-800">{{ user.email }}</p>
+    </div>
+
+    <!-- Email Confirmation Status -->
+    <div class="mb-4">
+        <p class="text-gray-800">
+            Email {{ user.email_confirmed_at ? 'Confirmed': 'Not confirmed' }}
+        </p>
+    </div>
+
+    <!-- Role -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">Role:</span>
+        <p class="text-gray-800 capitalize">{{ user.role }}</p>
+    </div>
+
+    <!-- Last Sign In -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">Last Sign In At:</span>
+        <p class="text-gray-800">{{ user.last_sign_in_at | date: 'medium' }}</p>
+    </div>
+
+    <!-- Account Creation Date -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">Phone:</span>
+        <p class="text-gray-800">{{ user.phone }}</p>
+    </div>
+
+    <!-- Email Verified Status -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">Email Verified:</span>
+        <!-- <p class="text-gray-800">{{ user.user_metadata.email_verified ? 'Yes' : 'No' }}</p> -->
+    </div>
+
+    <!-- Sign-In Provider -->
+    <div class="mb-4">
+        <span class="text-sm font-medium text-gray-500">Provider:</span>
+        <p class="text-gray-800 capitalize">{{ user.app_metadata.provider }}</p>
+    </div>
+</div>

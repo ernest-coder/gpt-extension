@@ -11,8 +11,8 @@ export class MenuComponent {
 
   constructor(private router: Router) { }
 
-  loadAuthPage():void {
-    this.router.navigate(['/auth']); 
+  loadUserPage():void {
+    this.router.navigate(['/user']); 
   }
   
   loadChatPage():void {

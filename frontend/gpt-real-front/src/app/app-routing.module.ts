@@ -7,6 +7,7 @@ import { AuthPageComponent } from './components/auth/auth-page/auth-page.compone
 import { PricingPageComponent } from './components/pricing/pricing-page/pricing-page.component';
 import { EmailLoginComponent } from './components/auth/email-login/email-login.component';
 import { EmailSignupComponent } from './components/auth/email-signup/email-signup.component';
+import { UserComponent } from './shared/user/user.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,15 @@ const routes: Routes = [
       {
         path: 'signup',
         component: EmailSignupComponent,
+      },
+    ],
+  },
+  {
+    path: 'user',
+    children: [
+      {
+        path: '',
+        component: UserComponent,
       },
     ],
   },

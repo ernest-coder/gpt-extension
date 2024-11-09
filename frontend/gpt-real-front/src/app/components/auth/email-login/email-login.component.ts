@@ -30,12 +30,14 @@ export class EmailLoginComponent {
         next: (response) => {
           if (response.error) {
             this.alertToastService.error('Login Error: ' + response.error.message);
-          } else if (response.user) {
+          } else if (response.data.session && response.data.session.user) { // Adjusted to check session.user
             this.router.navigate(['/chat']);
+          } else {
+            this.alertToastService.error('Unexpected response structure.');
           }
         },
         error: (error) => {
-          this.alertToastService.error('Unexpected login error.');
+          this.alertToastService.error('Unexpected login error.', error);
         }
       });
     } else {
