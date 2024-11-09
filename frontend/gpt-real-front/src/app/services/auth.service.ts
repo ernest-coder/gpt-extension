@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { SupabaseService } from '../shared/services/supabase.service';
-import { AuthChangeEvent, AuthResponse, AuthTokenResponsePassword, Session } from '@supabase/supabase-js';
+import { AuthChangeEvent, AuthError, AuthResponse, AuthTokenResponsePassword, Session } from '@supabase/supabase-js';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,11 @@ export class AuthService {
   emailLogin(email: string, password: string): Observable<AuthTokenResponsePassword> {
     const loginPromise = this.supabaseService.client.auth.signInWithPassword({ email, password });
     return from(loginPromise);
+  }
+
+  logout(): Observable<any> {
+    const logoutPromise = this.supabaseService.client.auth.signOut();
+    return from(logoutPromise);
   }
 
   getSession(): Observable<any> {

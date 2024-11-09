@@ -8,6 +8,7 @@ import { PricingPageComponent } from './components/pricing/pricing-page/pricing-
 import { EmailLoginComponent } from './components/auth/email-login/email-login.component';
 import { EmailSignupComponent } from './components/auth/email-signup/email-signup.component';
 import { UserComponent } from './shared/user/user.component';
+import {AuthGuard} from './shared/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
       {
         path: '',
         component: ChatPageComponent,
+        canActivate: [AuthGuard]
       },
     ],
   },
@@ -25,6 +27,7 @@ const routes: Routes = [
       {
         path: '',
         component: TranslatePageComponent,
+        canActivate: [AuthGuard]
       },
     ],
   },
@@ -34,6 +37,7 @@ const routes: Routes = [
       {
         path: '',
         component: GrammarPageComponent,
+        canActivate: [AuthGuard]
       },
     ],
   },
@@ -69,6 +73,7 @@ const routes: Routes = [
       {
         path: '',
         component: PricingPageComponent,
+        canActivate: [AuthGuard]
       },
     ],
   },

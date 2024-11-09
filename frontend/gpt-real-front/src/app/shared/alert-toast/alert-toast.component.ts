@@ -54,13 +54,13 @@ export class AlertToastComponent implements OnInit, OnDestroy {
         if (!alert) return;
         switch(alert?.type){
             case AlertToastType.SUCCESS:
-                return 'border-l-4 border-green-700 text-green-800';
+                return 'border-l-4 border-green-500 text-green-500';
             case AlertToastType.WARNING:
-                return 'border-l-4 border-orange-500 text-orange-600';
+                return 'border-l-4 border-orange-500 text-orange-500';
             case AlertToastType.INFO:
-                return 'border-l-4 border-blue-700 text-blue-800';
+                return 'border-l-4 border-blue-500 text-blue-500';
             case AlertToastType.ERROR:
-                return 'border-l-4 border-red-700 text-red-800';
+                return 'border-l-4 border-red-500 text-red-500';
         }
         return ""
         

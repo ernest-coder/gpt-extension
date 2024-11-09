@@ -19,7 +19,6 @@ export class UserComponent implements OnInit {
       if (data.session && data.session.user) {
         this.loggedIn = true;
         this.user = data.session.user
-        console.log(this.user)
       } else {
         this.router.navigate(['/auth']); 
       }
@@ -31,6 +30,17 @@ export class UserComponent implements OnInit {
       } else {
         this.loggedIn = false;
         this.router.navigate(['/auth']); 
+      }
+    });
+  }
+
+  logout(): void {
+    this.authService.logout().subscribe({
+      next: () => {
+        this.router.navigate(['/auth']);
+      },
+      error: (error) => {
+        console.error('Logout error', error);
       }
     });
   }

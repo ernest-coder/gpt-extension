@@ -25,7 +25,7 @@
             "failed": "Failed"
         },
         "menu": {
-            "login": "Login",
+            "user": "User",
             "chat": "Chat",
             "translate": "Translate",
             "grammar": "Grammar"
