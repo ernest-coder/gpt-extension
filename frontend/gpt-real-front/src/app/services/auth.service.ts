@@ -25,6 +25,12 @@ export class AuthService {
     });
   }
 
+  signInWithFacebook() {
+    return this.supabaseService.client.auth.signInWithOAuth({
+      provider: 'facebook',
+    });
+  }
+
   logout(): Observable<any> {
     const logoutPromise = this.supabaseService.client.auth.signOut();
     return from(logoutPromise);

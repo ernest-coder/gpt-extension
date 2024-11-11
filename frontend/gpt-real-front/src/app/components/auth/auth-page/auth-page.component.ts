@@ -30,9 +30,16 @@ export class AuthPageComponent {
   }
     
 
-  loginWithApple() {
-    console.log('Apple login clicked');
-  }
+  loginWithFacebook() {
+    this.authService.signInWithFacebook().then((response) => {
+      if (response.error) {
+        this.alertToastService.error(`Error logging in with Facebook: ${response.error}`,);
+      } else {
+        this.router.navigate(['/chat']);
+      }
+    }).catch((error) => {
+      this.alertToastService.error(`Unexpected error during Facebook login: ${error}`);
+    });  }
 
   signupWithEmail() {
     this.router.navigate(['email'], { relativeTo: this.route });

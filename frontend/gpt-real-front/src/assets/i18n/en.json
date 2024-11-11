@@ -38,7 +38,7 @@
         "connect": "Connect",
         "email_login": "Login with an email",
         "google_login": "Login with Google",
-        "apple_login": "Login with Apple",
+        "facebook_login": "Login with Facebook",
         "data_privacy": "Your data will not be shared, and there will be no spam.",
         "privacy_policy": "By continuing, you agree to the Privacy Policy & Terms of Use."
     },
